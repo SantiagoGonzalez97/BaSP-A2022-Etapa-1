@@ -3,7 +3,7 @@ Problematic 02
 ```
 Estructure of landing page on HTML
 ```
-## Resolucion:
+## Resolution:
 The problem has been resolved following the good practices provided by the company and the implementation of a semantic structure according to what was requested, using the landing page created with Figma in the previous problem as a scheme.
 ## Fragment of landin page
 ```
