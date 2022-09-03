@@ -104,14 +104,115 @@ nav h2{
     border-bottom: #373867 solid 2px;
     top: 120px;
 }
-
-
-
-
-
+/**/
 main{
     position: relative;
     left: 370px;
     background-color: #FFFFFF;
     top: 110px;
+}
+main h2{
+    position: relative;
+    display: inline;
+    font-family: 'roboto';
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: underline #373867 solid 3px;
+    color: #373867;
+    left: 462px;
+    top: 40px;
+}
+#first-section{
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+#first-card{
+    position: relative;
+    width: 650px;
+    top: 85px;
+    left: 50px;
+}
+#first-text h3{
+font-family: 'roboto';
+font-size: 30px;
+font-weight: bold;
+color: #373867;
+margin-top: 15px;
+}
+#first-text p{
+    height: 115px;
+    width: 550px;
+    margin-top: 15px;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: 400;
+    color: #373867;
+}
+#second-card{
+    position: relative;
+    float: right;
+    bottom:445px;
+    right: 510px;
+    width: 330px;
+    height: 155px;
+}
+#second-text h3{
+    position: relative;
+    float: right;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: bold;
+    color: #373867;
+    bottom: 150px;
+    right: 5px;
+}
+#second-text p{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: 600;
+    color: #373867;
+    left: 150px;
+    bottom: 100px;
+}
+#p-fs{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    width: 445px;
+    float: right;
+    bottom: 250px;
+    right: 65px;
+}
+#third-card{
+    position: relative;
+    left: 710px;
+    bottom: 230px;
+}
+#third-text h3{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: bold;
+    color: #373867;
+    left: 150px;
+    bottom: 165px;
+    width: 50px;
+}
+#third-text p{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: 600;
+    color: #373867;
+    width: 230px;
+    left: 150px;
+    bottom: 140px;
+}
+#section-divisor{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    width: 1200px;
+    bottom: 250px;
+    
 }
