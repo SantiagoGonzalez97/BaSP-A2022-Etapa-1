@@ -1,17 +1,17 @@
 body{
     width: 1550px;
 }
-
 header{
-    position: relative;
+    position: fixed;
     width: 1550px;
     height: 110px;
     background-color: #373867;
+    z-index: 1;
 }
 header h1{
     position: relative;
     left: 400px;
-    font-family:roboto;
+    font-family: 'roboto';
     font-weight: bold;
     font-size: 60px;
     color: #FFFFFF;
@@ -19,5 +19,99 @@ header h1{
 }
 .rrlogo{
     position: relative;
-    top: 20px;
+    top: 18px;
+    left: 48px;
+}
+aside{
+    position: fixed;
+    background-color: #c4c4c4;
+    width: 370px;
+    height: 1550px;
+    border-radius: 5px;
+    top: 110px;
+}
+nav{
+    position: relative;
+}
+.nav-search{
+display: inline;
+position: relative;
+margin: 30px;
+top: 30px;
+}
+.nav-search i{
+    color: #373867;
+    margin: 10px;
+}
+nav input{
+    border-color: #373867;
+    border-radius: 5px;
+    background-color: #c4c4c4;
+    height: 30px;
+}
+nav ul{
+    position: relative;
+    top: 40px;
+}
+#ul-links li a{
+    top:37px;
+    position: relative;
+    text-decoration: underline;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: 400;
+    color: #373867;
+    left: 68px;
+}
+#ul-links li{
+    margin-bottom: 40px;
+}
+nav h2{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: 400;
+    color: #373867;
+    top: 100px;
+    left: 68px;
+}
+.p-1{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    top: 85px;
+}
+#ul-contact li a{
+    position: relative;
+    top: 85px;
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: 500;
+    color: #373867;
+    margin-left: 10px;
+    text-decoration: none;
+}
+#ul-contact li i{
+    position: relative;
+    top: 85px;
+    color: #373867;
+    margin-left: 10px;
+}
+#ul-contact li{
+    margin-bottom: 20px;
+}
+.p-2{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    top: 120px;
+}
+
+
+
+
+
+main{
+    position: relative;
+    left: 370px;
+    background-color: #FFFFFF;
+    top: 110px;
 }
