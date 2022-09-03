@@ -1,0 +1,23 @@
+body{
+    width: 1550px;
+}
+
+header{
+    position: relative;
+    width: 1550px;
+    height: 110px;
+    background-color: #373867;
+}
+header h1{
+    position: relative;
+    left: 400px;
+    font-family:roboto;
+    font-weight: bold;
+    font-size: 60px;
+    color: #FFFFFF;
+    top: -50px;
+}
+.rrlogo{
+    position: relative;
+    top: 20px;
+}
