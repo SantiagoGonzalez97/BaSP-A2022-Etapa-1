@@ -134,11 +134,11 @@ main h2{
     left: 50px;
 }
 #first-text h3{
-font-family: 'roboto';
-font-size: 30px;
-font-weight: bold;
-color: #373867;
-margin-top: 15px;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: bold;
+    color: #373867;
+    margin-top: 15px;
 }
 #first-text p{
     height: 115px;
@@ -450,4 +450,76 @@ margin-top: 15px;
     border-bottom: #373867 solid 2px;
     width: 1200px;
     bottom: 400px;
+}
+#fifth-section{
+    position: relative;
+    bottom: 300px;
+}
+#fifth-section h3{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: bold;
+    color: #373867;
+    bottom: 70px;
+    left: 450px;
+}
+#name input{
+    position: relative;
+    width: 789px;
+    height: 55px;
+    font-family: 'roboto';
+    left: 122px;
+    font-size: 20px;
+    color: #373867;
+    font-weight: 400;
+}
+#email input{
+    position: relative;
+    width: 789px;
+    height: 55px;
+    font-family: 'roboto';
+    left: 122px;
+    font-size: 20px;
+    color: #373867;
+    font-weight: 400;
+    top: 30px;
+}
+#selection select{
+    position: relative;
+    width: 795px;
+    height: 44px;
+    font-family: 'roboto';
+    left: 122px;
+    font-size: 20px;
+    color: #373867;
+    font-weight: 400;
+    top: 60px;
+}
+#area-text textarea{
+    position: relative;
+    width: 740px;
+    height: 95px;
+    left: 128px;
+    top: 90px;
+}
+#submit-info input{
+    position: relative;
+    background-color:#3738671b;
+    border: 0;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    color: #37386754;
+    width: 162px;
+    height: 49px;
+    border-radius: 5px;
+    left: 890px;
+    top: 40px;
+}
+#section-five-divisor{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    width: 1200px;
+    top: 100px;
 }
