@@ -3,7 +3,7 @@ body{
 }
 header{
     position: fixed;
-    width: 1550px;
+    width: 1700px;
     height: 110px;
     background-color: #373867;
     z-index: 1;
@@ -149,10 +149,24 @@ margin-top: 15px;
     font-weight: 400;
     color: #373867;
 }
+#first-text input{
+    position: relative;
+    left: 530px;
+    bottom: 40px;
+    background-color:#3738671b;
+    border: 0;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    color: #37386754;
+    width: 80px;
+    height: 33px;
+    border-radius: 5px;
+}
 #second-card{
     position: relative;
     float: right;
-    bottom:445px;
+    bottom:480px;
     right: 510px;
     width: 330px;
     height: 155px;
@@ -176,18 +190,33 @@ margin-top: 15px;
     left: 150px;
     bottom: 100px;
 }
+#second-text input{
+    position: relative;
+    left: 310px;
+    bottom: 100px;
+    background-color:#3738671b;
+    border: 0;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    color: #37386754;
+    width: 80px;
+    height: 33px;
+    border-radius: 5px;
+
+}
 #p-fs{
     position: relative;
     border-bottom: #373867 solid 2px;
     width: 445px;
     float: right;
-    bottom: 250px;
+    bottom: 290px;
     right: 65px;
 }
 #third-card{
     position: relative;
     left: 710px;
-    bottom: 230px;
+    bottom: 280px;
 }
 #third-text h3{
     position: relative;
@@ -205,14 +234,66 @@ margin-top: 15px;
     font-size: 25px;
     font-weight: 600;
     color: #373867;
-    width: 230px;
+    width: 240px;
     left: 150px;
     bottom: 140px;
 }
-#section-divisor{
+#third-text input{
+    position: relative;
+    left: 310px;
+    bottom: 150px;
+    background-color:#3738671b;
+    border: 0;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    color: #37386754;
+    width: 80px;
+    height: 33px;
+    border-radius: 5px;
+}
+#p-second-s{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    width: 445px;
+    bottom: 140px;
+}
+#section-one-divisor{
     position: relative;
     border-bottom: #373867 solid 2px;
     width: 1200px;
-    bottom: 250px;
-    
+    bottom: 320px;
+}
+#second-section{
+    position: relative;
+    width: 100%;
+}
+#trayectory-section h3{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: bold;
+    color: #373867;
+    top: -30px;
+    text-align: center;
+}
+#trayectory-section p{
+    position: relative;
+    float: left;
+    width: 300px;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: 400;
+    color: #373867;
+    left: 95px;
+}
+#second-section img{
+    position: relative;
+    left: 200px;
+}
+#section-two-divisor{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    width: 1200px;
+    top: 10px;
 }
