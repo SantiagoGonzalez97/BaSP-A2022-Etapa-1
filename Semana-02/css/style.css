@@ -415,3 +415,39 @@ margin-top: 15px;
     width: 1200px;
     bottom: 150px;
 }
+#fourth-section{
+    position: relative;
+}
+#fourth-section h3{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: bold;
+    color: #373867;
+    left: 470px;
+    bottom: 120px;
+}
+#fourth-section img{
+    position: relative;
+    left: 45px;
+    bottom: 80px;
+}
+#fourth-section ol{
+    position: relative;
+    left: 750px;
+    bottom: 450px;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: 400;
+    color: #373867;
+    width: 290px;
+}
+#fourth-section ol li{
+    margin-bottom: 50px;
+}
+#section-four-divisor{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    width: 1200px;
+    bottom: 400px;
+}
