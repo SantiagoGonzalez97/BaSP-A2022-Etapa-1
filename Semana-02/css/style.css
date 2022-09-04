@@ -523,3 +523,39 @@ main h2{
     width: 1200px;
     top: 100px;
 }
+#sixth-section{
+    position: relative;
+    bottom: 180px;
+}
+#sixth-section h3{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: bold;
+    color: #373867;
+    left: 512px;
+}
+#sixth-section img{
+    position: relative;
+    top: 55px;
+    left: 155px;
+}
+#sixth-section ul{
+    position: relative;
+    left: 610px;
+    width: 395px;
+    bottom: 390px;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: 400;
+    color: #373867;
+}
+#sixth-section ul li{
+    margin-bottom: 60px;
+}
+#section-six-divisor{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    bottom: 400px;
+    width: 1200px;
+}
