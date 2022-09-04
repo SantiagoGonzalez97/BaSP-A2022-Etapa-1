@@ -3,7 +3,7 @@ body{
 }
 header{
     position: fixed;
-    width: 1700px;
+    width: 1570px;
     height: 110px;
     background-color: #373867;
     z-index: 1;
@@ -296,4 +296,122 @@ margin-top: 15px;
     border-bottom: #373867 solid 2px;
     width: 1200px;
     top: 10px;
+}
+#third-section{
+    position: relative;
+}
+#third-section h3{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: bold;
+    color: #373867;
+    top: 40px;
+    left: 150px;
+}
+#dev-pro{
+    float: left;
+    position: relative;
+    left: 50px;
+    top: 80px;
+}
+#dev-pro h4{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: bold;
+    color: #373867;
+    left: 200px;
+    bottom:150px;
+    width: 150px;
+}
+#dev-pro p{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: 400;
+    color: #373867;
+    width: 210px;
+    left: 200px;
+    bottom:120px;
+}
+#running{
+    position: relative;
+    left: 400px;
+    top: 80px;
+}
+#running h4{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: bold;
+    color: #373867;
+    left: 200px;
+    bottom: 150px;
+}
+#running p{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: 400;
+    color: #373867;
+    width: 180px;
+    left: 410px;
+    bottom: 180px;
+}
+#progress{
+    position: relative;
+    left: 50px;
+    top: 130px;
+}
+#progress h4{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: bold;
+    color: #373867;
+    left: 200px;
+    bottom: 150px;
+    width: 200px;
+}
+#progress p{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: 400;
+    color: #373867;
+    left: 200px;
+    bottom: 130px;
+    width: 190px;
+}
+#decisions{
+    position: relative;
+    left: 650px;
+    bottom: 150px;
+}
+#decisions h4{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: bold;
+    color: #373867;
+    left: 170px;
+    bottom: 150px;
+    width: 130px;
+}
+#decisions p{
+    position: relative;
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: 400;
+    color: #373867;
+    left: 170px;
+    bottom: 130px;
+    width: 180px;
+}
+#section-three-divisor{
+    position: relative;
+    border-bottom: #373867 solid 2px;
+    width: 1200px;
+    bottom: 150px;
 }
