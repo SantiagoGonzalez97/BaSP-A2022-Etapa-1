@@ -130,6 +130,7 @@ main h2{
     position: relative;
     width: 100%;
     height: 700px;
+    left: 100px;
 }
 #first-card{
     position: relative;
@@ -265,10 +266,12 @@ main h2{
     border-bottom: #373867 solid 2px;
     width: 100%;
     bottom: 480px;
+    right: 100px;
 }
 #second-section{
     position: relative;
     width: 100%;
+    left: 100px
 }
 #trayectory-section h3{
     display: inline-block;
@@ -277,7 +280,8 @@ main h2{
     font-size: 30px;
     font-weight: bold;
     color: #373867;
-    bottom: 50px;
+    bottom: 0px;
+    left:300px;
 }
 #trayectory-section p{
     position: relative;
@@ -298,9 +302,11 @@ main h2{
     border-bottom: #373867 solid 2px;
     width: 100%;
     top: 10px;
+    right: 100px;
 }
 #third-section{
     position: relative;
+    left: 100px;
 }
 #third-section h3{
     position: relative;
@@ -309,7 +315,7 @@ main h2{
     font-weight: bold;
     color: #373867;
     top: 40px;
-    left: 450px;
+    left: 100px;
 }
 #dev-pro{
     float: left;
@@ -416,9 +422,11 @@ main h2{
     border-bottom: #373867 solid 2px;
     width: 100%;
     bottom: 150px;
+    right: 100px;
 }
 #fourth-section{
     position: relative;
+    left: 100px;
 }
 #fourth-section h3{
     position: relative;
@@ -452,10 +460,12 @@ main h2{
     border-bottom: #373867 solid 2px;
     width: 100%;
     bottom: 400px;
+    right: 100px;
 }
 #fifth-section{
     position: relative;
     bottom: 300px;
+    left: 100px;
 }
 #fifth-section h3{
     position: relative;
@@ -524,6 +534,7 @@ main h2{
     border-bottom: #373867 solid 2px;
     width: 100%;
     top: 100px;
+    right: 100px;
 }
 #sixth-section{
     position: relative;
@@ -630,4 +641,10 @@ footer a{
     display: inline-block;
     margin-left: 55px;
     margin-top: 10px;
+}
+#first-section button{
+    position: relative;
+    border: none;
+    left: 1300px;
+    top: -50px;
 }
