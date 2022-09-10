@@ -1,0 +1,85 @@
+main{ 
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+}
+#menu-dots{
+    display: flex;
+    margin-left: 14px;
+    margin-top: 8px;
+    width: 30px;
+}
+main h2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    color: #373867;
+    font-family: 'roboto';
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: -30px;
+}
+#first-section{
+    display:flex;
+    flex-direction: column;
+}
+.message-button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -40px;
+}
+.card{
+    display: flex;
+    flex-direction: column
+}
+.card img{
+    display: flex;
+    align-self: center;
+    object-fit: cover;
+    width: 277px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: red;
+}
+.first-text{
+    display: flex;
+    flex-direction: column;
+}
+.first-text h3{
+    display: flex;
+    color: #373867;
+    align-self: center;
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.first-text p{
+    display: flex;
+    color: #373867;
+    align-self: center;
+    width: 250px;
+    font-family: 'roboto';
+    font-size: 15px;
+    font-weight: 400;
+    margin-top:10px;
+}
+.first-text input{
+    display: flex;
+    align-self: center;
+    margin: 5px 0 25px 0;
+    text-align: center;
+    background-color:#3738671b;
+    border: 0;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    color: #37386754;
+    width: 80px;
+    height: 33px;
+    border-radius: 5px;
+}
