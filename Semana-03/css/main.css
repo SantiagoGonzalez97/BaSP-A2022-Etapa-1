@@ -229,3 +229,28 @@ main h2{
     border-radius: 5px;
     align-self: center;
 }
+#sixth-section{
+    display: flex;
+    flex-direction: column;
+}
+#sixth-section h3{
+    color: #373867;
+    font-family: 'roboto';
+    font-size: 6.08vh;
+    font-weight: bold;
+    align-self: center;
+    margin: 75px 0 50px 0;
+}
+.check-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.check-list p{
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: 400;
+    color: #373867;
+    width: 330px;
+    margin: 50px 0 50px 0;
+}
