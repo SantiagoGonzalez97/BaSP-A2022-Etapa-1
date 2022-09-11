@@ -1,13 +1,13 @@
 main{ 
     display: flex;
     flex-direction: column;
-    width: 390px;
+    width: 38vw;
 }
 #menu-dots{
     display: flex;
     margin-left: 14px;
     margin-top: 8px;
-    width: 30px;
+    width: 2.92vw;
 }
 main h2{
     display: flex;
@@ -16,7 +16,7 @@ main h2{
     align-items: baseline;
     color: #373867;
     font-family: 'roboto';
-    font-size: 40px;
+    font-size: 6.08vh;
     font-weight: bold;
     margin-top: -30px;
 }
@@ -40,8 +40,8 @@ main h2{
     display: flex;
     align-self: center;
     object-fit: cover;
-    width: 277px;
-    height: 200px;
+    width: 27.05vw;
+    height: 30.4vh;
     border-radius: 10px;
     background-color: red;
 }
@@ -82,4 +82,39 @@ main h2{
     width: 80px;
     height: 33px;
     border-radius: 5px;
+}
+#second-section{
+    display: flex;
+    flex-direction: column;
+}
+#trayectory-section{
+    display: flex;
+    flex-direction: column;
+}
+#trayectory-section h3{
+    display: flex;
+    align-self: center;
+    color: #373867;
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 298px;
+}
+#trayectory-section p{
+    display: flex;
+    color: #373867;
+    align-self: center;
+    width: 330px;
+    font-family: 'roboto';
+    font-size: 15px;
+    font-weight: 400;
+    margin-top:10px;
+}
+#trayectory-section img{
+    display: flex;
+    align-self: center;
+    object-fit: cover;
+    width: 322px;
+    margin: 48px 0 35px 0;
 }
