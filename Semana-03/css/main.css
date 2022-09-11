@@ -151,7 +151,30 @@ main h2{
     font-family: 'roboto';
     font-size: 20px;
     font-weight: 400;
+    color: #373867;
     width: 210px;
     margin-bottom: 80px;
     align-self: center;
+}
+#fourth-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+#fourth-section h3{
+    font-family: 'roboto';
+    font-size: 6.08vh;
+    color: #373867;
+    font-weight: bold;
+    margin: 100px 0 50px 0;
+}
+#fourth-section ol li{
+    color: #373867;
+    font-family: 'roboto';
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+#fourth-section img{
+    margin-bottom: 50px;
 }
