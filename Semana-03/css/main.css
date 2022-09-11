@@ -118,3 +118,40 @@ main h2{
     width: 322px;
     margin: 48px 0 35px 0;
 }
+#third-section{
+    display: flex;
+    flex-direction: column;
+}
+#third-section h3{
+    font-family: 'roboto';
+    font-size: 6.08vh;
+    color: #373867;
+    font-weight: bold;
+    margin: 100px 0 50px 0;
+    align-self: center;
+}
+.work-card{
+    display: flex;
+    flex-direction: column;
+}
+.work-card img{
+    display: flex;
+    width: 117px;
+    align-self: center;
+}
+.work-card h4{
+    font-family: 'roboto';
+    font-size: 25px;
+    color: #373867;
+    font-weight: bold;
+    align-self:  center;
+    margin: 40px 0 50px 0;
+}
+.work-card p{
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: 400;
+    width: 210px;
+    margin-bottom: 80px;
+    align-self: center;
+}

@@ -1,4 +1,6 @@
 body{
+    flex-direction: column;
+    display: flex;
     width: 37.1vw;
     height: 1095vh;
 }
