@@ -1,6 +1,44 @@
 body{
-    flex-direction: column;
     display: flex;
-    width: 37.1vw;
-    height: 1095vh;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
+@media(min-width: 768px){
+    #main-id h2{
+        display: flex;
+        font-size: 60px;
+    }
+    #main-id{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #first-section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 50%;
+    }
+    .card img{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+
+/*@media (min-width: 768px) { --> de mobile a tablet
+@media (min-width: 1024px){ --> de tablet a desktop*/
