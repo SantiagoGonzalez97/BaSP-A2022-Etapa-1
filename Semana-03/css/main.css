@@ -27,7 +27,7 @@ main h2{
 #first-section{
     display:flex;
     flex-direction: column;
-    max-width: 1200px;
+    min-width: 380px;
 }
 .message-button{
     border: none;
