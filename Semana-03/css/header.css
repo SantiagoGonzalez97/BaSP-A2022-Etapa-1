@@ -5,6 +5,10 @@ header{
     width: 100%;
     min-height: 197px;
 }
+.h1-header{
+    display: flex;
+    align-self: center;
+}
 header h1{
     display: flex;
     align-self: center;

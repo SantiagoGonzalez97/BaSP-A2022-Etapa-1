@@ -5,30 +5,34 @@ body{
     height: 100%;
 }
 @media(min-width: 768px){
+    .h1-header h1{
+        display: flex;
+        max-width: 1000px;
+        font-size: 60px;
+    }
     #main-id h2{
         display: flex;
         font-size: 60px;
     }
     #main-id{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        max-width: 95%;
     }
-    #first-section{
+    .first-flex-section{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 100%;
+        justify-content: space-between;
     }
-    .card {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    .card-1{
+        max-width: 50%;
     }
-    .card img{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    .card-2{
+        max-width: 50%;
+    }
+    .card-3{
+        max-width: 40%;
+        margin-left: 20%;
     }
 }
 
