@@ -23,6 +23,7 @@ body{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-top: 50px;
     }
     .card-1{
         max-width: 50%;
@@ -113,6 +114,17 @@ body{
     .check-list-3{
         width: 25%;
     }
+    .flex-lists{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 80%;
+    }
+    .ord-list{
+        width: 35%;
+    }
+    .unord-list{
+        width: 40%;
 }
 
 
