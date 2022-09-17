@@ -22,7 +22,7 @@ console.log('Exercise 3.c): ', meses);
 var meses;
 meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 meses.shift();
-meses.pop()
+meses.pop();
 console.log('Exercise 3.d): ', meses);
 
 //e) Invertir el orden del array (utilizar reverse).

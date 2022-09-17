@@ -22,13 +22,13 @@ console.log('Exercise 2.d): ', total);
 
 //e) Crear una variable de tipo string con al menos 10 caracteres y algún espacio en blanco. Encontrar la posición del primer espacio en blanco y guardarla en una variable (utilizar indexOf).
 var wordE, index;
-wordE = 'Radium Rocket'
-index = wordE.indexOf(' ')
+wordE = 'Radium Rocket';
+index = wordE.indexOf(' ');
 console.log('Exercise 2.e): ', index);
 
 //f) Crear una variable de tipo string con al menos 2 palabras largas (10 caracteres y algún espacio entre medio). Utilizar los métodos de los ejercicios anteriores para generar un nuevo string que tenga la primera letra de ambas palabras en mayúscula y las demás letras en minúscula (utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).
 var wordF, total;
-wordF = 'professional programmer'
+wordF = 'professional programmer';
 total = wordF.substring(0,1).toUpperCase() + wordF.substring(1, wordF.indexOf(' ')).toLowerCase()
 + ' ' + wordF.substring(wordF.indexOf(' ')+ 1, wordF.indexOf(' ')+2).toUpperCase() +
 wordF.substring(wordF.indexOf(' ') + 2).toLowerCase();
