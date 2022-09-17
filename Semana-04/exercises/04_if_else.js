@@ -31,5 +31,5 @@ if (age < 2) {
 }else if (age <= 75){
     alert('Exercise 4.b): ' + 'Adulto mayor');
 }else if (age > 75) {
-    alert('Exercise 4.b): ' + 'Anciano')
+    alert('Exercise 4.b): ' + 'Anciano');
 }
