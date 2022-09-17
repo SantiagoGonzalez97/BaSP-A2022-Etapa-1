@@ -4,18 +4,18 @@ var firstNumber, secondNumber, suma;
 firstNumber = 5;
 secondNumber= 10;
 suma = firstNumber + secondNumber;
-console.log(suma);
+console.log('Exercise 1.a): ', suma);
 
 //b) Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er variable.
 var firstName, lastName, fullName;
 firstName = 'Santiago ';
 lastName = 'González';
 fullName = firstName + lastName;
-console.log(fullName);
+console.log('Exercise 1.b): ', fullName);
 
 //c)Crear dos variables de tipo String y sumar el largo de cada variable (cantidad de letras del string) guardando el resultado de la suma en una 3er variable (utilizar length).
 var  firstVar, secondVar, bothVar;
 firstVar = 'Javascript';
 secondVar = 'Exercises';
 bothVar = firstVar.length + secondVar.length;
-console.log(bothVar);
+console.log('Exercise 1.c): ', bothVar);
