@@ -2,17 +2,22 @@ header{
     display: flex;
     justify-content: space-around;
     background-color: #373867;
-    width: 37.1vw;
-    height: 29.98vh;
+    width: 100%;
+    min-height: 197px;
+}
+.h1-header{
+    display: flex;
+    align-self: center;
 }
 header h1{
     display: flex;
     align-self: center;
-    width: 24.4vw;
+    max-width: 600px;
     font-family: 'roboto';
     font-size: 40px;
     font-weight: bold;
     color: #ffffff;
+    margin-left: 20px;
 }
 .rrlogo{
     display: flex;
