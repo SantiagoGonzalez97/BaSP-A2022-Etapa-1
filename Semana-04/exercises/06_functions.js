@@ -41,12 +41,12 @@ function sumaD(a,b){
         }
     } else {
         return console.log('Exercise 6.d): ' +  (a + b));
-    }   
+    }
 }
 myVarA = sumaD(1,2)
 
 //e) Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de la función suma probando que todo siga funcionando igual.
-function validateInteger(a,b){
+function validateIntegerTwo(a,b){
     if (!validateInteger(a) || !validateInteger(b)){
         if (!validateInteger(a)) {
             alert('Exercise 6.e): ' + 'Parameter Error\nIts not an integer: ' + Math.round(a));
@@ -62,11 +62,11 @@ function validateInteger(a,b){
             return NaN;
         }
         else{
-            validateInteger(a);
-            validateInteger(b);
-            return a + b
+            validateIntegerTwo(a,b);
+            return console.log((a + b));
         }
     }
     myVarA = sumaD(1,2)
+    validateIntegerTwo(2,4)
 }
 

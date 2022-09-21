@@ -3,7 +3,7 @@ header{
     justify-content: space-around;
     background-color: #373867;
     width: 100%;
-    min-height: 197px;
+    height: 197px;
 }
 .h1-header{
     display: flex;
