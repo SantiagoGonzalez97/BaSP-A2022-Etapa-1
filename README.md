@@ -33,6 +33,16 @@ Responsive design (Flexbox)
 Made a responsive design using mobile first for smartphone, tablet and desktop.
 ```
 ```
+
+Problematic 05:
+
+```
+JavaScript exercises
+```
+## Resolution:
+Resolved the exercises using the material provided by the company.
+```
+```
 Author: Santiago González
 ```
 ```
