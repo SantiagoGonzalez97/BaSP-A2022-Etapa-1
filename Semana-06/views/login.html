@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/header.css">
+    <script src="../javascript/login.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -32,16 +33,15 @@
             <div>
                 <label>Email</label>
                 <input id="email" type="text" placeholder="Email">
+                <p id="email-error" class="hidden">Error: email not valid</p>
             </div>
             <div>
                 <label>Password</label>
                 <input id="password" type="password" placeholder="Password">
             </div>
-            <div>
-                <div class="buttons">
-                    <button id="btn-login"><a href="#">Login</a></button>
-                    <button id="btn-cancel"><a href="#">Cancel</a></button>
-                </div>
+            <div class="buttons">
+                <button id="btn-login"><a href="#">Login</a></button>
+                <button id="btn-cancel"><a href="#">Cancel</a></button>
             </div>
         </form>
     </main>

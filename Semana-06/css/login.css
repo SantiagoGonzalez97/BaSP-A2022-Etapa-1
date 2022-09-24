@@ -9,6 +9,7 @@ main{
     font-size: 40px;
     color: #373867;
     font-weight: bold;
+    margin-bottom: 5%;
 }
 form{
     display: flex;
@@ -40,4 +41,24 @@ label{
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 20px;
+}
+.buttons{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+.borderSuccess{
+    border: 2px solid green;
+}
+.borderWarning{
+    border: 2px solid red;
+}
+.hidden{
+    display: none;
+}
+.active{
+    display: block;
+    color: red;
+    font-family: 'roboto';
 }
