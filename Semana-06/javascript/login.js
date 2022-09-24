@@ -7,7 +7,7 @@ console.log("password", password)
 var login = document.getElementById("btn-login");
 console.log("btn-login", login);
 
-//Events
+//Events onblur
 email.onblur = function(){
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var emailValue = email.value;
@@ -23,6 +23,21 @@ email.onblur = function(){
         email.classList.add("border-red");
     }
 }
+password.onblur = function(){
+    var passwordValue = password.value;
+    if(passwordValue === null || passwordValue === '' || passwordValue.length <= 7 || passwordValue.search(/[0-9]/) < 0 ){
+        p = document.getElementById("password-error");
+        p.classList.replace("hidden", "active");
+        password.classList.remove("border-green");
+        password.classList.add("border-red");
+    } else {
+        p = document.getElementById("password-error");
+        p.classList.replace("active", "hidden");
+        password.classList.remove("border-red");
+        password.classList.add("border-green");
+    }
+}
+
 
 
 

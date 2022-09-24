@@ -48,16 +48,18 @@ label{
     justify-content: space-around;
     margin-bottom: 5%;
 }
-.borderSuccess{
+.border-green{
     border: 2px solid green;
 }
-.borderWarning{
+.border-red{
     border: 2px solid red;
 }
 .hidden{
     display: none;
 }
 .active{
+    margin-top: -10%;
+    margin-bottom: 5%;
     display: block;
     color: red;
     font-family: 'roboto';
