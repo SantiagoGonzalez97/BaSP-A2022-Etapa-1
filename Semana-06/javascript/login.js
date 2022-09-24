@@ -38,13 +38,13 @@ password.onblur = function(){
     }
 }
 
-
-
-
-
-
-
-
-
+//Events onfocus
+    email.onfocus = function(){
+        p = document.getElementById("email-error");
+        p.classList.replace("active", "hidden");
+    }
+    password.onfocus = function(){
+        p = document.getElementById("password-error");
+        p.classList.replace("active", "hidden");
+    }
 }
-//var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
