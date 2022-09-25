@@ -17,10 +17,12 @@ email.onblur = function(){
         p.classList.replace("active", "hidden");
         email.classList.remove("border-red");
         email.classList.add("border-green");
+        validateEmailAlert = true;
     }else {
         var p = document.getElementById("email-error");
         p.classList.replace("hidden", "active");
         email.classList.add("border-red");
+        validateEmailAlert = false;
     }
 }
 password.onblur = function(){
@@ -30,11 +32,13 @@ password.onblur = function(){
         p.classList.replace("hidden", "active");
         password.classList.remove("border-green");
         password.classList.add("border-red");
+        validatePasswordAlert = false;
     } else {
         p = document.getElementById("password-error");
         p.classList.replace("active", "hidden");
         password.classList.remove("border-red");
         password.classList.add("border-green");
+        validatePasswordAlert = true;
     }
 }
 
@@ -47,4 +51,18 @@ password.onblur = function(){
         p = document.getElementById("password-error");
         p.classList.replace("active", "hidden");
     }
+
+//Event onclick
+    var msg = "";
+    login.onclick = function(e){
+        e.preventDefault()
+        if(!validateEmailAlert && !validatePasswordAlert){
+            msg+= "Error :(\nEmail: " + email.value + "\nPassword: " + password.value;
+        }
+        if(validateEmailAlert && validatePasswordAlert){
+            msg+= "Logged successfully!\nEmail: " + email.value + "\nPassword: " + password.value;
+        }
+        alert(msg);
+    }
 }
+

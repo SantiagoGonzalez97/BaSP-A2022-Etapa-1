@@ -64,3 +64,20 @@ label{
     color: red;
     font-family: 'roboto';
 }
+
+#btn-login{
+
+    background-color:#3738671b;
+    border: 0;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    color: #37386754;
+    width: 50%;
+    height: 49px;
+    border-radius: 5px;
+    align-self: center;
+}
+#btn-login a{
+    text-decoration: none;
+}
