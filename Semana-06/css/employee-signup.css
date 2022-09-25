@@ -16,6 +16,7 @@ form{
     background: #c4c4c4;
     border-radius: 5px;
     text-align: center;
+    min-height: 700px;
 }
 .sign-up-title{
     margin-top: 50px;
@@ -55,7 +56,7 @@ label{
     margin-left: -340px;
     flex-wrap: wrap;
 }
-#name, #surname, #dni, #date, #phone, #address, #location, #postal, #email, #password, #password-repeat{
+#name, #surname, #dni, #dob, #phone, #address, #location, #postal, #email, #password, #password-repeat{
     display: flex;
     flex-direction: column;
     color: #373867;
@@ -64,12 +65,15 @@ label{
     font-size: 20px;
     width: 100%;
     height: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .right-inputs{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: -306px;
+    margin-top: -405px;
     margin-right: -257px;
+}
+p{
+    width: 250px;
 }
