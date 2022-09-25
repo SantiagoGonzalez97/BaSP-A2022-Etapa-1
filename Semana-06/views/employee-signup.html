@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/employee-signup.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="../javascript/employee-signup.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header-flex">
+        <header>
+            <div class="rrlogo">
+                <img src="../assets/icons/LOGO-RR 2.svg" alt="Logo Radium Rocket">
+            </div>
+            <div class="h1-header">
+            <h1>
+                Gigatech Software Solutions SA
+            </h1>
+            </div>
+        </header>
+    </div>
+    <main>
+        <form>
+            <h1 class="sign-up-title">
+                Sign Up
+            </h1>
+            <div class="left-inputs">
+                <div>
+                    <label>Name</label>
+                    <input type="text" id="name" placeholder="Name">
+                    <p id="name-error-length" class="hidden">Error: write 3 characters or more</p>
+                    <p id="name-error-caracter" class="hidden">Error: write characters only</p>
+                </div>
+                <div>
+                    <label>Surname</label>
+                    <input type="text" id="surname" placeholder="Surname">
+                    <p id="surname-error-length" class="hidden">Error: write 3 characters or more</p>
+                    <p id="surname-error-caracter" class="hidden">Error: write characters only</p>
+                </div>
+                <div>
+                    <label>DNI</label>
+                    <input type="text" id="dni" placeholder="DNI">
+                    <p id="dni-error-length" class="hidden">Error: write 7 characters or more</p>
+                    <p id="dni-error-caracter" class="hidden">Error: write numbers only</p>
+                </div>
+                <div>
+                    <label>Date of birth</label>
+                    <input type="text" id="dob" placeholder="Date of birth">
+                    <p id="date-error" class="hidden">Error: dd/mm/yyyy</p>
+                </div>
+                <div>
+                    <label>Phone</label>
+                    <input type="text" id="phone" placeholder="Phone">
+                    <p id="phone-error-length" class="hidden">Error: write 10 numbers</p>
+                    <p id="phone-error-caracter" class="hidden">Error: only numbers</p>
+                </div>
+            </div>
+            <div class="right-inputs">
+                <div>
+                    <label>Address</label>
+                    <input type="text" id="address" placeholder="Address">
+                    <p id="address-error-length" class="hidden">Error: write at least 5 characters</p>
+                    <p id="address-error-space" class="hidden">Error: it must be an space between</p>
+                    <p id="address-error-caracter" class="hidden">Error: write numbers and letters</p>
+                    <p id="address-error-caracter-special" class="hidden">Error: don't write special characters</p>
+                </div>
+                <div>
+                    <label>Location</label>
+                    <input type="text" id="location" placeholder="Location">
+                    <p id="location-error-length" class="hidden">Error: at least 3 characters</p>
+                    <p id="location-error-caracter" class="hidden">Error: only alphanumeric text</p>
+                </div>
+                <div>
+                    <label>Postal code</label>
+                    <input type="text" id="postal" placeholder="Postal code">
+                    <p id="postal-error-length" class="hidden">Error: write only numbers</p>
+                    <p id="postal-error-caracter" class="hidden">Error: between 4 and 5 caracteres</p>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" id="email" placeholder="Email">
+                    <p id="email-error" class="hidden">Error: enter valid mail</p>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Password">
+                    <p id="password-error" class="hidden">Error: password not valid</p>
+                </div>
+                <div>
+                    <label>Repeat Password</label>
+                    <input type="password" id="password-repeat" placeholder="Password">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="btn-create" type="submit"><a href="#">Create</a></button>
+                <button id="btn-cancel"><a href="#">Cancel</a></button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <h5>
+            © 2022 GigaTech Sofware Solutions SA.
+        </h5>
+        <div id="footer-links">
+            <a href="#">
+                <img src="../assets/icons/facebook.svg" alt="Facebook">
+            </a>
+            <a href="#">
+                <img src="../assets/icons/twitter.svg" alt="Twitter">
+            </a>
+            <a href="#">
+                <img src="../assets/icons/linkedin.svg" alt="Linkedin">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
