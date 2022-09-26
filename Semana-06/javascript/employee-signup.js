@@ -216,9 +216,58 @@ passwordRepeat.onblur = function(){
     }
 }
 
+// Event onfocus
+name.onfocus = function(){
+    p = document.getElementById("name-error-length");
+    p.classList.replace("active", "hidden");
+    p = document.getElementById("name-error-caracter");
+    p.classList.replace("active", "hidden");
+}
+surname.onfocus = function(){
+    p = document.getElementById("surname-error-length");
+    p.classList.replace("active", "hidden");
+    p = document.getElementById("surname-error-caracter");
+    p.classList.replace("active", "hidden");
+}
+dni.onfocus = function(){
+    p = document.getElementById("dni-error-length");
+    p.classList.replace("active", "hidden");
+}
+dob.onfocus = function(){
+    p = document.getElementById("date-error");
+    p.classList.replace("active", "hidden");
+}
+phone.onfocus = function(){
+    p = document.getElementById("phone-error-length");
+    p.classList.replace("active", "hidden");
+}
+location.onfocus = function(){
+    p = document.getElementById("location-error-length");
+    p.classList.replace("active", "hidden");
+    p = document.getElementById("location-error-caracter");
+    p.classList.replace("active", "hidden");
+}
+postal.onfocus = function(){
+    p = document.getElementById("postal-error-length");
+    p.classList.replace("active", "hidden");
+    p = document.getElementById("postal-error-caracter");
+    p.classList.replace("active", "hidden");
+}
+email.onfocus = function(){
+    p = document.getElementById("email-error");
+    p.classList.replace("active", "hidden");
+}
+password.onfocus = function(){
+    p = document.getElementById("password-error");
+    p.classList.replace("active", "hidden");
+}
+passwordRepeat.onfocus = function(){
+    p = document.getElementById("password-repeat");
+    p.classList.replace("active", "hidden");
+}
 
 
-//  /^[a-z0-9]+$/i   locationValue.search(/^[a-z0-9]+$/i) |
+
 
 
 
