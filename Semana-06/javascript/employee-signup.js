@@ -66,7 +66,7 @@ surname.onblur = function(){
 }
 dni.onblur = function(){
 var dniValue = dni.value;
-    if(dniValue.length < 8 && isNaN(dniValue) || dniValue === null || dniValue === ''){
+    if(dniValue.length < 8 || dniValue === null || dniValue === '' && isNaN(dniValue) ){
     p = document.getElementById("dni-error-length");
     p.classList.replace("hidden", "active");
     dni.classList.remove("border-green");
@@ -111,9 +111,9 @@ dob.onblur = function(){
         dob.classList.add("border-green");
     }
 }
-phone.onfocus = function(){
+phone.onblur = function(){
     var phoneValue = phone.value;
-    if(phoneValue < 11 && isNaN(phoneValue) || phoneValue === null || phoneValue === '' ){
+    if(phoneValue.length < 10 && !Number(phoneValue) || phoneValue === null || phoneValue === '' ){
         p = document.getElementById("phone-error-length");
         p.classList.replace("hidden", "active");
         phone.classList.add("border-red")
@@ -124,12 +124,101 @@ phone.onfocus = function(){
         phone.classList.add("border-green");
     }
 }
+//adress.onblur
+
+location.onblur = function(){
+var locationValue = location.value;
+    if(locationValue.length < 4){
+        p = document.getElementById("location-error-length");
+        p.classList.replace("hidden", "active");
+        location.classList.add("border-red");
+    }else {
+        p = document.getElementById("location-error-length");
+        p.classList.replace("active", "hidden");
+        location.classList.add("border-green");
+    }if(locationValue.search(/^[a-z0-9]+$/i)){
+        p = document.getElementById("location-error-caracter");
+        p.classList.replace("hidden", "active");
+        location.classList.add("border-red");
+    } else{
+        p = document.getElementById("location-error-caracter");
+        p.classList.replace("active", "hidden");
+        location.classList.remove("border-red");
+        location.classList.add("border-green");
+    }
+}
+postal.onblur = function(){
+var postalValue = postal.value;
+    if(postalValue == Number(postalValue)){
+        p = document.getElementById("postal-error-length");
+        p.classList.replace("active", "hidden");
+        if(postalValue.length == 4 || postalValue.length == 5){
+            p = document.getElementById("postal-error-caracter");
+            p.classList.replace("active", "hidden");
+            postal.classList.remove("border-red");
+            postal.classList.add("border-green");
+        } else{
+            p = document.getElementById("postal-error-caracter");
+            p.classList.replace("hidden", "active");
+            postal.classList.remove("border-green");
+            postal.classList.add("border-red");
+        }
+    }else {
+        p = document.getElementById("postal-error-length");
+        p.classList.replace("hidden", "active");
+        postal.classList.add("border-red");
+    }
+}
+email.onblur = function(){
+    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    var emailValue = email.value;
+    var validateEmail = emailExpression.test(emailValue);
+    if (validateEmail){
+        p = document.getElementById("email-error");
+        p.classList.replace("active", "hidden");
+        email.classList.remove("border-red");
+        email.classList.add("border-green");
+        validateEmailAlert = true;
+    }else {
+        var p = document.getElementById("email-error");
+        p.classList.replace("hidden", "active");
+        email.classList.add("border-red");
+        validateEmailAlert = false;
+    }
+}
+password.onblur = function(){
+    var passwordValue = password.value;
+    if(passwordValue === null || passwordValue === '' || passwordValue.length <= 7 || passwordValue.search(/[0-9]/) < 0 ){
+        p = document.getElementById("password-error");
+        p.classList.replace("hidden", "active");
+        password.classList.remove("border-green");
+        password.classList.add("border-red");
+        validatePasswordAlert = false;
+    } else {
+        p = document.getElementById("password-error");
+        p.classList.replace("active", "hidden");
+        password.classList.remove("border-red");
+        password.classList.add("border-green");
+        validatePasswordAlert = true;
+    }
+}
+passwordRepeat.onblur = function(){
+    var passwordRepeatValue = passwordRepeat.value;
+    if(passwordRepeatValue != validatePasswordAlert){
+        p = document.getElementById("password-repeat");
+        p.classList.replace("hidden", "active");
+        passwordRepeat.classList.add("border-red");
+    } else{
+        p = document.getElementById("password-repeat");
+        p.classList.replace("active", "hidden");
+        passwordRepeat.classList.remove("border-red");
+        passwordRepeat.classList.add("border-green");
+    }
+}
 
 
 
-
-
-
+//  /^[a-z0-9]+$/i   locationValue.search(/^[a-z0-9]+$/i) |
 
 
 
