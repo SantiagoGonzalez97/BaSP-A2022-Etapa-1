@@ -77,3 +77,15 @@ label{
 p{
     width: 250px;
 }
+#btn-cancel{
+    background-color:rgb(251, 35, 35);
+    border: 0;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    color: #37386754;
+    width: 50%;
+    height: 49px;
+    border-radius: 5px;
+    align-self: center;
+}
