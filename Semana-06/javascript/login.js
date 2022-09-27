@@ -43,20 +43,20 @@ password.onblur = function(){
 }
 
 //Events onfocus
-    email.onfocus = function(){
-        p = document.getElementById("email-error");
-        p.classList.replace("active", "hidden");
-    }
-    password.onfocus = function(){
-        p = document.getElementById("password-error");
-        p.classList.replace("active", "hidden");
-    }
+email.onfocus = function(){
+    p = document.getElementById("email-error");
+    p.classList.replace("active", "hidden");
+}
+password.onfocus = function(){
+    p = document.getElementById("password-error");
+    p.classList.replace("active", "hidden");
+}
 
 //Event onclick
     var msg = "";
     login.onclick = function(e){
         e.preventDefault()
-        if(!validateEmailAlert && !validatePasswordAlert){
+        if(!validateEmailAlert || !validatePasswordAlert){
             msg+= "Error :(\nEmail: " + email.value + "\nPassword: " + password.value;
         }
         if(validateEmailAlert && validatePasswordAlert){

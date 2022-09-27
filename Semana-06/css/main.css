@@ -6,6 +6,7 @@ main{
     flex-direction: column;
     width: 100%;
     flex-wrap: wrap;
+    margin-top: 150px;
 }
 .menu-dots{
     display: flex;
@@ -318,4 +319,12 @@ main h2{
     font-weight: 400;
     width: 250px;
     margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px){
+    main {
+        margin-left: 350px;
+    }
+    .menu-dots{
+        display: none;
+    }
 }

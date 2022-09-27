@@ -25,6 +25,7 @@ console.log("password-repeat", passwordRepeat);
 var buttonCreate = document.getElementById("btn-create");
 console.log("btn-create", buttonCreate);
 
+
 // Alert validations
 var validateNameAlert = false;
 var validateSurnameAlert = false;

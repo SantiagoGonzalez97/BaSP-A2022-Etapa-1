@@ -131,18 +131,10 @@ body{
 }
 
 @media screen and (min-width: 1024px){
-    .hide{
-        display: flex;
-        width: 350px;
-        height: 100%;
-    }
-    .header-flex header {
+    /*.header-flex header {
         display: flex;
         max-height: 110px;
-    }
-    aside{
-        display: flex;
-    }
+    }*/
 
 }
 
