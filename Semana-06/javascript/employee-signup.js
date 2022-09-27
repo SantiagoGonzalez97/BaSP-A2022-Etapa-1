@@ -22,6 +22,16 @@ var password = document.getElementById("password");
 console.log("password", password);
 var passwordRepeat = document.getElementById("password-repeat");
 console.log("password-repeat", passwordRepeat);
+var buttonCreate = document.getElementById("btn-create");
+console.log("btn-create", buttonCreate);
+
+// Alert validations
+var validateNameAlert = false;
+var validateSurnameAlert = false;
+var validateDniAlert = false;
+var validateDobAlert = false;
+
+
 
 //Event onblur
 name.onblur = function(){
@@ -36,6 +46,7 @@ var nameValue = name.value;
         p.classList.replace("active", "hidden");
         name.classList.remove("border-red");
         name.classList.add("border-green");
+        validateNameAlert = true;
     }
     if(nameValue.search(/[^0-9]/) < 0){
         p = document.getElementById("name-error-caracter");
@@ -56,6 +67,7 @@ surname.onblur = function(){
         p.classList.replace("active", "hidden");
         name.classList.remove("border-red");
         surname.classList.add("border-green");
+        validateSurnameAlert = true;
     }
     if (surnameValue.search(/[^0-9]/)){
         p = document.getElementById("surname-error-caracter");
@@ -75,6 +87,7 @@ var dniValue = dni.value;
         p = document.getElementById("dni-error-length");
         p.classList.replace("active", "hidden");
         dni.classList.add("border-green");
+        validateDniAlert = true;
     }
 }
 dob.onblur = function(){
@@ -109,6 +122,7 @@ dob.onblur = function(){
         p.classList.replace("active", "hidden");
         p.classList.remove("border-red");
         dob.classList.add("border-green");
+        validateDobAlert = true;
     }
 }
 phone.onblur = function(){
@@ -122,10 +136,59 @@ phone.onblur = function(){
         p.classList.replace("active", "hidden");
         phone.classList.remove("border-red");
         phone.classList.add("border-green");
+        validatePhoneAlert = true;
     }
 }
-//adress.onblur
-
+address.onblur = function() {
+    var addressValue = address.value;
+    if (addressValue.length < 5){
+        p = document.getElementById("address-error-length");
+        p.classList.replace("hidden", "active");
+        address.classList.add("border-red");
+    } else {
+        p = document.getElementById("address-error-length");
+        p.classList.replace("active", "hidden");
+        if (addressValue.indexOf(" ") === -1){
+            var p = document.getElementById("address-error-space");
+            p.classList.replace("hidden", "active");
+            address.classList.add("border-red");
+        } else {
+            p = document.getElementById("address-error-space");
+            p.classList.replace("active", "hidden");
+            var letterAddress = 0;
+            var numberAddress = 0;
+            var spacesAddress = 0;
+            for (var i = 0; i < addressValue.length; i++) {
+                letra = addressValue.substring(i,i+1);
+                var ascii = letra.charCodeAt();
+                if (letra == Number(letra) && ascii != 32){
+                    numberAddress += 1;
+                } else if (!((ascii < 65) || (ascii > 90 && ascii < 97) || (ascii > 122) && (ascii != 209 && ascii != 241))){
+                    letterAddress += 1;
+                } else if (ascii == 32 ){
+                    spacesAddress += 1
+                }
+            }
+            if(letterAddress == 0 || numberAddress == 0){
+                var p = document.getElementById("address-error-caracter");
+                p.classList.replace("hidden", "active");
+                address.classList.add("border-red");
+            } else if(letterAddress + numberAddress + spacesAddress == addressValue.length){
+                p = document.getElementById("address-error-caracter");
+                p.classList.replace("active", "hidden");
+                var p2 = document.getElementById("address-error-caracter-special");
+                p2.classList.replace("active", "hidden");
+                address.classList.remove("border-red");
+                address.classList.add("border-green");
+                validateAddressAlert = true;
+            } else {
+                var p = document.getElementById("address-error-caracter-special");
+                p.classList.replace("hidden", "active");
+                address.classList.add("border-red");
+            }
+        }
+    }
+}
 location.onblur = function(){
 var locationValue = location.value;
     if(locationValue.length < 4){
@@ -145,6 +208,7 @@ var locationValue = location.value;
         p.classList.replace("active", "hidden");
         location.classList.remove("border-red");
         location.classList.add("border-green");
+        validateLocationAlert = true;
     }
 }
 postal.onblur = function(){
@@ -157,6 +221,7 @@ var postalValue = postal.value;
             p.classList.replace("active", "hidden");
             postal.classList.remove("border-red");
             postal.classList.add("border-green");
+            validatePostalAlert = true;
         } else{
             p = document.getElementById("postal-error-caracter");
             p.classList.replace("hidden", "active");
@@ -200,19 +265,21 @@ password.onblur = function(){
         password.classList.remove("border-red");
         password.classList.add("border-green");
         validatePasswordAlert = true;
+        return passwordOk = password.value;
     }
 }
 passwordRepeat.onblur = function(){
     var passwordRepeatValue = passwordRepeat.value;
-    if(passwordRepeatValue != validatePasswordAlert){
-        p = document.getElementById("password-repeat");
+    if(passwordRepeatValue != passwordOk){
+        p = document.getElementById("password-repeat-error");
         p.classList.replace("hidden", "active");
         passwordRepeat.classList.add("border-red");
     } else{
-        p = document.getElementById("password-repeat");
+        p = document.getElementById("password-repeat-error");
         p.classList.replace("active", "hidden");
         passwordRepeat.classList.remove("border-red");
         passwordRepeat.classList.add("border-green");
+        validatePasswordRepeatAlert = true;
     }
 }
 
@@ -241,6 +308,16 @@ phone.onfocus = function(){
     p = document.getElementById("phone-error-length");
     p.classList.replace("active", "hidden");
 }
+address.onfocus = function(){
+    p = document.getElementById("address-error-length");
+    p.classList.replace("active", "hidden");
+    p = document.getElementById("address-error-space");
+    p.classList.replace("active", "hidden");
+    p = document.getElementById("address-error-caracter");
+    p.classList.replace("active", "hidden");
+    p = document.getElementById("address-error-caracter-special");
+    p.classList.replace("active", "hidden");
+}
 location.onfocus = function(){
     p = document.getElementById("location-error-length");
     p.classList.replace("active", "hidden");
@@ -266,57 +343,28 @@ passwordRepeat.onfocus = function(){
     p.classList.replace("active", "hidden");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Event onclick
+    var msg = "";
+    buttonCreate.onclick = function(e){
+        e.preventDefault()
+        if(!validateNameAlert){
+            msg+=" Error :(\n Name: " + name.value;
+        }
+        if(validateNameAlert){
+            msg+=" Signed up successfully!\n Name: " + name.value;
+        }
+        if(!validateSurnameAlert){
+            msg+=" Error :(\n Surname: " + surname.value;
+        }
+        if(validateSurnameAlert){
+            msg+=" Signed up successfully!\n Surname: " + surname.value;
+        }
+        if(!validateDniAlert){
+            msg+=" Error :(\n DNI: " + dni.value;
+        }
+        if(validateDniAlert){
+            msg+=" Signed up successfully!\n DNI: " + dni.value;
+        }
+        alert(msg);
+    }
 }
