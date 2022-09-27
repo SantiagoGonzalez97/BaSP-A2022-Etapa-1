@@ -30,8 +30,13 @@ var validateNameAlert = false;
 var validateSurnameAlert = false;
 var validateDniAlert = false;
 var validateDobAlert = false;
-
-
+var validatePhoneAlert = false;
+var validateAddressAlert = false;
+var validateLocationAlert = false;
+var validatePostalAlert = false;
+var validateEmailAlert = false;
+var validatePasswordAlert = false;
+var validatePasswordRepeatAlert = false;
 
 //Event onblur
 name.onblur = function(){
@@ -348,22 +353,70 @@ passwordRepeat.onfocus = function(){
     buttonCreate.onclick = function(e){
         e.preventDefault()
         if(!validateNameAlert){
-            msg+=" Error :(\n Name: " + name.value;
+            msg+=" Error :\n Name: " + name.value;
         }
         if(validateNameAlert){
             msg+=" Signed up successfully!\n Name: " + name.value;
         }
         if(!validateSurnameAlert){
-            msg+=" Error :(\n Surname: " + surname.value;
+            msg+=" \nError :\n Surname: " + surname.value;
         }
         if(validateSurnameAlert){
-            msg+=" Signed up successfully!\n Surname: " + surname.value;
+            msg+=" \nSigned up successfully!\n Surname: " + surname.value;
         }
         if(!validateDniAlert){
-            msg+=" Error :(\n DNI: " + dni.value;
+            msg+=" \nError :\n DNI: " + dni.value;
         }
         if(validateDniAlert){
-            msg+=" Signed up successfully!\n DNI: " + dni.value;
+            msg+=" \nSigned up successfully!\n DNI: " + dni.value;
+        }
+        if(!validateDobAlert){
+            msg+=" \nError :\n Date of birthday: " + dob.value;
+        }
+        if(validateDobAlert){
+            msg+=" \nSigned up successfully!\n Date of birthday: " + dob.value;
+        }
+        if(!validatePhoneAlert){
+            msg+=" \nError :\n Phone number: " + phone.value;
+        }
+        if(validatePhoneAlert){
+            msg+=" \nSigned up successfully!\n Date of birthday: " + phone.value;
+        }
+        if(!validateAddressAlert){
+            msg+=" \nError :\n Address: " + address.value;
+        }
+        if(validateAddressAlert){
+            msg+=" \nSigned up successfully!\n Address: " + address.value;
+        }
+        if(!validateLocationAlert){
+            msg+=" \nError :\n Location: " + location.value;
+        }
+        if(validateLocationAlert){
+            msg+=" \nSigned up successfully!\n Location: " + location.value;
+        }
+        if(!validatePostalAlert){
+            msg+=" \nError :\n Postal code: " + postal.value;
+        }
+        if(validatePostalAlert){
+            msg+=" \nSigned up successfully!\n Postal code: " + postal.value;
+        }
+        if(!validateEmailAlert){
+            msg+=" \nError :\n Email: " + email.value;
+        }
+        if(validateEmailAlert){
+            msg+=" \nSigned up successfully!\n Email: " + email.value;
+        }
+        if(!validatePasswordAlert){
+            msg+=" \nError :\n Password: " + password.value;
+        }
+        if(validatePasswordAlert){
+            msg+=" \nSigned up successfully!\n Password: " + password.value;
+        }
+        if(!validatePasswordRepeatAlert){
+            msg+=" \nError :\n Repeat password: " + passwordRepeat.value;
+        }
+        if(validatePasswordRepeatAlert){
+            msg+=" \nSigned up successfully!\n Repeat Password: " + passwordRepeat.value;
         }
         alert(msg);
     }
