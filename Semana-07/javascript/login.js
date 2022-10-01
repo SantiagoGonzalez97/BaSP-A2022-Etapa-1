@@ -53,35 +53,44 @@ password.onfocus = function(){
 }
 
 //Event onclick
-    var msg = "";
     login.onclick = function(e){
         e.preventDefault()
-        if(!validateEmailAlert || !validatePasswordAlert){
-            msg+= "Error :(\nEmail: " + email.value + "\nPassword: " + password.value;
-        }
         if(validateEmailAlert && validatePasswordAlert){
-            msg+= "Logged successfully!\nEmail: " + email.value + "\nPassword: " + password.value;
+            get(email.value, password.value);
         }
-        alert(msg);
     }
 }
 
-
 //Week-07
-function get(){
-var email = email.value;
-var password = password.value;
-var urlWhitQP = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + email + '&password=' + password;
-fetch(urlWhitQP)
+function get(email,password){
+    var urls = {
+        email: 'rose@radiumrocket.com',
+        password: 'BaSP2022'
+    }
+    if(urls.email === email && urls.password === password){
+        urlsOk  = '?email=' + urls.email + '&password=' + urls.password;
+    } else{
+        urlsOk = '';
+    }
+fetch('https://basp-m2022-api-rest-server.herokuapp.com/login' + urlsOk)
     .then(function(res){
         return res.json();
     })
     .then(function(responseJson){
         if(responseJson.success){
-            alert('logged' + responseJson);
+            alert('Logged successfully\nEmail: ' + urls.email + '\nPassword: ' + urls.password);
+            console.log(responseJson);
         }
         else{
-            alert('fail' + responseJson);
+            alert('Failed login!\nNot an employee');
         }
     })
+    .catch(function(error){
+        console.log(error);
+    })
 }
+
+
+
+
+
