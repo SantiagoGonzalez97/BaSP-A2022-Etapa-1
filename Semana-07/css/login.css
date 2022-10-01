@@ -1,0 +1,94 @@
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.login-title{
+    margin-top: 50px;
+    font-family: 'roboto';
+    font-size: 40px;
+    color: #373867;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid black 1px;
+    width: 25%;
+    min-width: 280px;
+    margin-top: 100px;
+    background: #c4c4c4;
+    border-radius: 5px;
+    text-align: center;
+}
+#email, #password{
+    display: flex;
+    flex-direction: column;
+    color: #373867;
+    font-weight: 400;
+    font-family: 'roboto';
+    font-size: 20px;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 35px;
+}
+label{
+    color: #373867;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+}
+.buttons{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+.border-green{
+    border: 2px solid green;
+}
+.border-red{
+    border: 2px solid red;
+}
+.hidden{
+    display: none;
+}
+.active{
+    margin-top: -10%;
+    margin-bottom: 5%;
+    display: block;
+    color: red;
+    font-family: 'roboto';
+}
+
+#btn-login{
+    background-color:#3738671b;
+    border: 0;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    color: #37386754;
+    width: 50%;
+    height: 49px;
+    border-radius: 5px;
+    align-self: center;
+}
+#btn-login a{
+    text-decoration: none;
+}
+#btn-cancel{
+    background-color:rgb(251, 35, 35);
+    border: 0;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    color: #37386754;
+    width: 50%;
+    height: 49px;
+    border-radius: 5px;
+    align-self: center;
+}
