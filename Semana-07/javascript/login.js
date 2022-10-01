@@ -68,4 +68,20 @@ password.onfocus = function(){
 
 
 //Week-07
-var urlWhitQP = 'https://basp-m2022-api-rest-server.herokuapp.com/login '
+function get(){
+var email = email.value;
+var password = password.value;
+var urlWhitQP = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + email + '&password=' + password;
+fetch(urlWhitQP)
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(responseJson){
+        if(responseJson.success){
+            alert('logged' + responseJson);
+        }
+        else{
+            alert('fail' + responseJson);
+        }
+    })
+}
