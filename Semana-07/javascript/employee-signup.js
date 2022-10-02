@@ -422,3 +422,16 @@ passwordRepeat.onfocus = function(){
         alert(msg);
     }
 }
+
+
+//Week-07
+function get(name,surname,dni,dob,phone,address,location, postal, email, password, passwordRepeat){
+    var urls = {
+        name: name.value,
+        surname: surname.value,
+        dni: dni.value,
+        dob: dob.value,
+        phone: phone.value,
+        address: address.value
+    }
+}

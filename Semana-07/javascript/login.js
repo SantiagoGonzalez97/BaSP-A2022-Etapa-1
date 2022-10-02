@@ -78,8 +78,7 @@ fetch('https://basp-m2022-api-rest-server.herokuapp.com/login' + urlsOk)
     })
     .then(function(responseJson){
         if(responseJson.success){
-            alert('Logged successfully\nEmail: ' + urls.email + '\nPassword: ' + urls.password);
-            console.log(responseJson);
+            alert('Logged successfully\nEmail: ' + responseJson.msg + '\nPassword: ' + responseJson.msg);
         }
         else{
             alert('Failed login!\nNot an employee');
