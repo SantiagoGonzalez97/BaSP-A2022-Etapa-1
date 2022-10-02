@@ -1,7 +1,7 @@
 window.onload = function(){
 //Validation names
-var name = document.getElementById("name");
-console.log("name", name)
+var nombre = document.getElementById("name");
+console.log("nombre", nombre)
 var surname = document.getElementById("surname");
 console.log("surname", surname)
 var dni = document.getElementById("dni");
@@ -40,25 +40,25 @@ var validatePasswordAlert = false;
 var validatePasswordRepeatAlert = false;
 
 //Event onblur
-name.onblur = function(){
-var nameValue = name.value;
+nombre.onblur = function(){
+var nameValue = nombre.value;
     if(nameValue.length < 4 || nameValue === null || nameValue === ''){
         p = document.getElementById("name-error-length");
         p.classList.replace("hidden", "active");
-        name.classList.remove("border-green");
-        name.classList.add("border-red");
+        nombre.classList.remove("border-green");
+        nombre.classList.add("border-red");
     }else{
         p = document.getElementById("name-error-length");
         p.classList.replace("active", "hidden");
-        name.classList.remove("border-red");
-        name.classList.add("border-green");
+        nombre.classList.remove("border-red");
+        nombre.classList.add("border-green");
         validateNameAlert = true;
     }
     if(nameValue.search(/[^0-9]/) < 0){
         p = document.getElementById("name-error-caracter");
         p.classList.replace("hidden", "active");
-        name.classList.remove("border-green");
-        name.classList.add("border-red");
+        nombre.classList.remove("border-green");
+        nombre.classList.add("border-red");
     }
 }
 surname.onblur = function(){
@@ -71,7 +71,7 @@ surname.onblur = function(){
     }else{
         p = document.getElementById("surname-error-length");
         p.classList.replace("active", "hidden");
-        name.classList.remove("border-red");
+        surname.classList.remove("border-red");
         surname.classList.add("border-green");
         validateSurnameAlert = true;
     }
@@ -290,7 +290,7 @@ passwordRepeat.onblur = function(){
 }
 
 // Event onfocus
-name.onfocus = function(){
+nombre.onfocus = function(){
     p = document.getElementById("name-error-length");
     p.classList.replace("active", "hidden");
     p = document.getElementById("name-error-caracter");
@@ -353,7 +353,7 @@ passwordRepeat.onfocus = function(){
     buttonCreate.onclick = function(e){
         e.preventDefault()
         if(validateNameAlert){
-            get(name.value);
+            get(nombre.value);
         }
         if(validateSurnameAlert){
             get(surname.value);
@@ -386,13 +386,13 @@ passwordRepeat.onfocus = function(){
             get(passwordRepeat.value);
         }
     }
-}
+
 
 
 //Week-07
-function get(name,surname,dni,dob,phone,address,location, postal, email, password, passwordRepeat){
-    var urls = {
-        name: name.value,
+function get(){
+    var urls = new URLSearchParams({
+        name: nombre.value,
         lastName: surname.value,
         dni: dni.value,
         dob: dob.value,
@@ -402,14 +402,8 @@ function get(name,surname,dni,dob,phone,address,location, postal, email, passwor
         zip: postal.value,
         email: email.value,
         password: password.value,
-        passwordRepeat: passwordRepeat.value
-    }
-    if(urls.name === name && urls.lastName === surname && urls.dni === dni && urls.dob === dob && urls.phone === phone && urls.address === address && urls.city === location && urls.zip === postal && urls.email === email && urls.password === password && urls.passwordRepeat === passwordRepeat){
-        urlsOk = '?name=' + urls.name + '&lastName=' + urls.lastName + '&dni=' + urls.dni + '&dob=' + urls.dob  + '&phone=' + urls.phone + '&address=' + urls.address + '&city=' + urls.city + '&zip=' + urls.zip + '&email=' + urls.email + '&password=' + urls.password + '&passwordRepeat=' + urls.passwordRepeat;
-    } else{
-        urlsOk = '';
-    }
-fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup' + urlsOk)
+    });
+fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup' + urls)
     .then(function(res){
         return res.json();
     })
@@ -417,10 +411,24 @@ fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup' + urlsOk)
         if(responseJson.success){
             alert('Logged success' + responseJson.msg)
         } else{
-            alert()
+            alert('failed' + responseJson.msg)
         }
     })
     .catch(function(error){
         console.log(error);
+        alert('failed try to signup')
     })
 }
+
+function local(){
+    localStorage.setItem('name', nombre.value);
+    localStorage.setItem('lastName', surname.value);
+}
+}
+
+// Test whitout this method
+/*if(urls.name === name && urls.lastName === surname && urls.dni === dni && urls.dob === dob && urls.phone === phone && urls.address === address && urls.city === location && urls.zip === postal && urls.email === email && urls.password === password && urls.passwordRepeat === passwordRepeat){
+    urlsOk = '?name=' + urls.name + '&lastName=' + urls.lastName + '&dni=' + urls.dni + '&dob=' + urls.dob  + '&phone=' + urls.phone + '&address=' + urls.address + '&city=' + urls.city + '&zip=' + urls.zip + '&email=' + urls.email + '&password=' + urls.password + '&passwordRepeat=' + urls.passwordRepeat;
+} else{
+    urlsOk = '';
+}*/
