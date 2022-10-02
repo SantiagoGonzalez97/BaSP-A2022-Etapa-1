@@ -350,76 +350,41 @@ passwordRepeat.onfocus = function(){
 }
 
 //Event onclick
-    var msg = "";
     buttonCreate.onclick = function(e){
         e.preventDefault()
-        if(!validateNameAlert){
-            msg+=" Error :\n Name: " + name.value;
-        }
         if(validateNameAlert){
-            msg+=" Signed up successfully!\n Name: " + name.value;
-        }
-        if(!validateSurnameAlert){
-            msg+=" \nError :\n Surname: " + surname.value;
+            get(name.value);
         }
         if(validateSurnameAlert){
-            msg+=" \nSigned up successfully!\n Surname: " + surname.value;
-        }
-        if(!validateDniAlert){
-            msg+=" \nError :\n DNI: " + dni.value;
+            get(surname.value);
         }
         if(validateDniAlert){
-            msg+=" \nSigned up successfully!\n DNI: " + dni.value;
-        }
-        if(!validateDobAlert){
-            msg+=" \nError :\n Date of birthday: " + dob.value;
+            get(dni.value);
         }
         if(validateDobAlert){
-            msg+=" \nSigned up successfully!\n Date of birthday: " + dob.value;
-        }
-        if(!validatePhoneAlert){
-            msg+=" \nError :\n Phone number: " + phone.value;
+            get(dob.value);
         }
         if(validatePhoneAlert){
-            msg+=" \nSigned up successfully!\n Date of birthday: " + phone.value;
-        }
-        if(!validateAddressAlert){
-            msg+=" \nError :\n Address: " + address.value;
+            get(phone.value);
         }
         if(validateAddressAlert){
-            msg+=" \nSigned up successfully!\n Address: " + address.value;
-        }
-        if(!validateLocationAlert){
-            msg+=" \nError :\n Location: " + location.value;
+            get(address.value);
         }
         if(validateLocationAlert){
-            msg+=" \nSigned up successfully!\n Location: " + location.value;
-        }
-        if(!validatePostalAlert){
-            msg+=" \nError :\n Postal code: " + postal.value;
+            get(location.value);
         }
         if(validatePostalAlert){
-            msg+=" \nSigned up successfully!\n Postal code: " + postal.value;
-        }
-        if(!validateEmailAlert){
-            msg+=" \nError :\n Email: " + email.value;
+            get(postal.value);
         }
         if(validateEmailAlert){
-            msg+=" \nSigned up successfully!\n Email: " + email.value;
-        }
-        if(!validatePasswordAlert){
-            msg+=" \nError :\n Password: " + password.value;
+            get(email.value);
         }
         if(validatePasswordAlert){
-            msg+=" \nSigned up successfully!\n Password: " + password.value;
-        }
-        if(!validatePasswordRepeatAlert){
-            msg+=" \nError :\n Repeat password: " + passwordRepeat.value;
+            get(password.value);
         }
         if(validatePasswordRepeatAlert){
-            msg+=" \nSigned up successfully!\n Repeat Password: " + passwordRepeat.value;
+            get(passwordRepeat.value);
         }
-        alert(msg);
     }
 }
 
@@ -428,10 +393,34 @@ passwordRepeat.onfocus = function(){
 function get(name,surname,dni,dob,phone,address,location, postal, email, password, passwordRepeat){
     var urls = {
         name: name.value,
-        surname: surname.value,
+        lastName: surname.value,
         dni: dni.value,
         dob: dob.value,
         phone: phone.value,
-        address: address.value
+        address: address.value,
+        city: location.value,
+        zip: postal.value,
+        email: email.value,
+        password: password.value,
+        passwordRepeat: passwordRepeat.value
     }
+    if(urls.name === name && urls.lastName === surname && urls.dni === dni && urls.dob === dob && urls.phone === phone && urls.address === address && urls.city === location && urls.zip === postal && urls.email === email && urls.password === password && urls.passwordRepeat === passwordRepeat){
+        urlsOk = '?name=' + urls.name + '&lastName=' + urls.lastName + '&dni=' + urls.dni + '&dob=' + urls.dob  + '&phone=' + urls.phone + '&address=' + urls.address + '&city=' + urls.city + '&zip=' + urls.zip + '&email=' + urls.email + '&password=' + urls.password + '&passwordRepeat=' + urls.passwordRepeat;
+    } else{
+        urlsOk = '';
+    }
+fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup' + urlsOk)
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(responseJson){
+        if(responseJson.success){
+            alert('Logged success' + responseJson.msg)
+        } else{
+            alert()
+        }
+    })
+    .catch(function(error){
+        console.log(error);
+    })
 }
