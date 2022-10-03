@@ -352,38 +352,8 @@ passwordRepeat.onfocus = function(){
 //Event onclick
     buttonCreate.onclick = function(e){
         e.preventDefault()
-        if(validateNameAlert){
-            get(nombre.value);
-        }
-        if(validateSurnameAlert){
-            get(surname.value);
-        }
-        if(validateDniAlert){
-            get(dni.value);
-        }
-        if(validateDobAlert){
-            get(dob.value);
-        }
-        if(validatePhoneAlert){
-            get(phone.value);
-        }
-        if(validateAddressAlert){
-            get(address.value);
-        }
-        if(validateLocationAlert){
-            get(location.value);
-        }
-        if(validatePostalAlert){
-            get(postal.value);
-        }
-        if(validateEmailAlert){
-            get(email.value);
-        }
-        if(validatePasswordAlert){
-            get(password.value);
-        }
-        if(validatePasswordRepeatAlert){
-            get(passwordRepeat.value);
+        if(validateNameAlert && validateSurnameAlert && validateDniAlert && validateDobAlert && validatePhoneAlert && validateAddressAlert &&validateLocationAlert && validatePostalAlert && validateEmailAlert && validatePasswordAlert && validatePasswordRepeatAlert){
+            get();
         }
     }
 
@@ -391,7 +361,7 @@ passwordRepeat.onfocus = function(){
 
 //Week-07
 function get(){
-    var urls = new URLSearchParams({
+    var urls ={
         name: nombre.value,
         lastName: surname.value,
         dni: dni.value,
@@ -402,29 +372,61 @@ function get(){
         zip: postal.value,
         email: email.value,
         password: password.value,
-    });
-fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup' + urls)
+    }
+    /*if(urls.name == nombre && urls.lastName == surname && urls.dni == dni && urls.dob == dob && urls.phone == phone && urls.address == address && urls.city == location && urls.zip == postal && urls.email == email && urls.password == password && urls.passwordRepeat == passwordRepeat){
+        urlsOk = '?name=' + urls.name + '&lastName=' + urls.lastName + '&dni=' + urls.dni + '&dob=' + urls.dob  + '&phone=' + urls.phone + '&address=' + urls.address + '&city=' + urls.city + '&zip=' + urls.zip + '&email=' + urls.email + '&password=' + urls.password ;
+        console.log('entro aca', urlsOk);
+    } /*else{
+        urlsOk = '';
+        console.log('entro else', urlsOk);
+    }*/
+fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup' + '?name=' + nombre.value + '&lastName=' + surname.value + '&dni=' + dni.value + '&dob=' + dob.value  + '&phone=' + phone.value + '&address=' + address.value + '&city=' + location.value + '&zip=' + postal.value + '&email=' + email.value + '&password=' + password.value)
     .then(function(res){
         return res.json();
     })
     .then(function(responseJson){
         if(responseJson.success){
-            alert('Logged success' + responseJson.msg)
+            alert('Logged success' + responseJson.msg);
+            local();
         } else{
-            alert('failed' + responseJson.msg)
+            alert('failed');
         }
     })
     .catch(function(error){
         console.log(error);
-        alert('failed try to signup')
+        alert('failed try to signup');
     })
 }
-
+}
 function local(){
     localStorage.setItem('name', nombre.value);
     localStorage.setItem('lastName', surname.value);
+    localStorage.setItem('dni', dni.value);
+    localStorage.setItem('dob', dob.value);
+    localStorage.setItem('phone', phone.value);
+    localStorage.setItem('address', address.value);
+    localStorage.setItem('city', location.value);
+    localStorage.setItem('zip', postal.value);
+    localStorage.setItem('email', email.value);
+    localStorage.setItem('password', password.value);
 }
+function getItems(){
+    nombre.value = localStorage.getItem('name');
+    surname.value = localStorage.getItem('surname');
+    dni.value = localStorage.getItem('dni');
+    dob.value = localStorage.getItem('dob');
+    phone.value = localStorage.getItem('phone');
+    address.value = localStorage.getItem('address');
+    location.value = localStorage.getItem('city');
+    postal.value = localStorage.getItem('zip');
+    email.value = localStorage.getItem('email');
+    password.value = localStorage.getItem('password');
 }
+
+
+//pasar primero el input a date y parsearlo
+
+
 
 // Test whitout this method
 /*if(urls.name === name && urls.lastName === surname && urls.dni === dni && urls.dob === dob && urls.phone === phone && urls.address === address && urls.city === location && urls.zip === postal && urls.email === email && urls.password === password && urls.passwordRepeat === passwordRepeat){
