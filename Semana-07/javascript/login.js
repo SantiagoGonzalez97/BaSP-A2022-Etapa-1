@@ -79,8 +79,3 @@ fetch('https://basp-m2022-api-rest-server.herokuapp.com/login' + '?email=' + ema
         console.log(error);
     })
 }
-
-
-
-
-
