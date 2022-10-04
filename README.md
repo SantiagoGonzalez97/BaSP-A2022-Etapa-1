@@ -52,6 +52,15 @@ Resolution:
 In this week create validations whit javascript on inputs of login and sign-up.
 ```
 ```
+## Problematic 07:
+```
+JavaScript Async and Storage
+```
+Resolution:
+Doing an HTTP request using Fetch method, and save and submit data whit Local Storage
+```
+```
 Author: Santiago González
 ```
+Github pages link: https://santiagogonzalez97.github.io/BaSP-A2022-Etapa-1/
 ```
