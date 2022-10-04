@@ -56,32 +56,23 @@ password.onfocus = function(){
     login.onclick = function(e){
         e.preventDefault()
         if(validateEmailAlert && validatePasswordAlert){
-            get(email.value, password.value);
+            get();
         }
     }
 }
 
 //Week-07
-function get(email,password){
-    var urls = {
-        email: 'rose@radiumrocket.com',
-        password: 'BaSP2022'
-    }
-    if(urls.email === email && urls.password === password){
-        urlsOk  = '?email=' + urls.email + '&password=' + urls.password;
-    } else{
-        urlsOk = '';
-    }
-fetch('https://basp-m2022-api-rest-server.herokuapp.com/login' + urlsOk)
+function get(){
+fetch('https://basp-m2022-api-rest-server.herokuapp.com/login' + '?email=' + email.value + '&password=' + password.value)
     .then(function(res){
         return res.json();
     })
     .then(function(responseJson){
         if(responseJson.success){
-            alert('Logged successfully\nEmail: ' + responseJson.msg + '\nPassword: ' + responseJson.msg);
+            alert(responseJson.msg  + '\nLogged successfully\nEmail: ' + email.value + '\nPassword: ' + password.value);
         }
         else{
-            alert('Failed login!\nNot an employee');
+            alert(responseJson.msg);
         }
     })
     .catch(function(error){

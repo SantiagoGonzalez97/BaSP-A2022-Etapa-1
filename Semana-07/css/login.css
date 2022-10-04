@@ -19,7 +19,7 @@ form{
     border: solid black 1px;
     width: 25%;
     min-width: 280px;
-    margin-top: 100px;
+    margin-top: 200px;
     background: #c4c4c4;
     border-radius: 5px;
     text-align: center;
@@ -76,6 +76,7 @@ label{
     height: 49px;
     border-radius: 5px;
     align-self: center;
+    margin-right: 20px;
 }
 #btn-login a{
     text-decoration: none;
@@ -91,4 +92,11 @@ label{
     height: 49px;
     border-radius: 5px;
     align-self: center;
+}
+#btn-cancel a{
+    text-decoration: none;
+}
+.buttons{
+    display: flex;
+    width: 200px;
 }

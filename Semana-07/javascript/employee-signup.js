@@ -1,29 +1,17 @@
 window.onload = function(){
 //Validation names
 var nombre = document.getElementById("name");
-console.log("nombre", nombre)
 var surname = document.getElementById("surname");
-console.log("surname", surname)
 var dni = document.getElementById("dni");
-console.log("dni", dni);
 var dob = document.getElementById("dob");
-console.log("dob", dob);
 var phone = document.getElementById("phone");
-console.log("phone", phone)
 var address = document.getElementById("address");
-console.log("address", address)
 var location = document.getElementById("location");
-console.log("location", location)
 var postal = document.getElementById("postal");
-console.log("postal", postal);
 var email = document.getElementById("email");
-console.log("email", email)
 var password = document.getElementById("password");
-console.log("password", password);
 var passwordRepeat = document.getElementById("password-repeat");
-console.log("password-repeat", passwordRepeat);
 var buttonCreate = document.getElementById("btn-create");
-console.log("btn-create", buttonCreate);
 
 
 // Alert validations
@@ -374,18 +362,6 @@ function locall(){
 }
 
 function gett(){
-    var urls ={
-        name: nombre.value,
-        lastName: surname.value,
-        dni: dni.value,
-        dob: dob.value,
-        phone: phone.value,
-        address: address.value,
-        city: location.value,
-        zip: postal.value,
-        email: email.value,
-        password: password.value,
-    }
 fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup' + '?name=' + nombre.value + '&lastName=' + surname.value
     + '&dni=' + dni.value + '&dob=' + dob.value  + '&phone=' + phone.value + '&address=' + address.value + '&city='
     + location.value + '&zip=' + postal.value + '&email=' + email.value + '&password=' + password.value)
